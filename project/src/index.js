@@ -97,8 +97,26 @@ searchButton.addEventListener("click", () => {
     {
         console.log("Clicked Search!");
         getWeatherData(cityInput.value);
+        cityInput.value = "";
     }
-})
+});
+
+cityInput.addEventListener("keypress", (event) =>
+{
+    if (event.key === "Enter")
+    {
+        if (cityInput.value !== "")
+    {
+        console.log("Clicked Search!");
+        getWeatherData(cityInput.value);
+        cityInput.value = "";
+    }
+
+    }
+
+    
+    
+});
 
 
 cityInput.addEventListener("change", (event) =>
